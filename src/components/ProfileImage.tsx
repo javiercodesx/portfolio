@@ -1,6 +1,7 @@
+import javierGonzalezImage from "../assets/javier_gonzalez.jpeg"
 
 export const ProfileImage = () => {
   return (
-    <img src="/javier_gonzalez.jpeg" alt="Javier Gonzalez" className="rounded-full"/>
+    <img src={javierGonzalezImage} alt="Javier Gonzalez" className="rounded-lg"/>
   )
 }
