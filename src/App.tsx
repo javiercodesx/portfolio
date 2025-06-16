@@ -1,12 +1,22 @@
 import { Button } from "./components/Button"
 import { Logo } from "./components/Logo"
+import { LogoDark } from "./components/LogoDark"
+import { ThemeToggle } from "./components/ToggleTheme"
+import { useTheme } from "./context/ThemeContext"
 
 export const App = () => {
+  const { theme } = useTheme()
 
+  console.log(theme)
   return (
     <>
       <header className="max-w-3xl mx-auto py-3 flex items-center justify-between">
-        <Button className="text-neutral-200 px-6 py-2 border border-gray-400 rounded-md" children={<Logo />} />
+        <ThemeToggle />
+
+        <Button
+          className="text-neutral-200 px-6 py-2 border border-gray-400 rounded-md"
+          children={<LogoDark />}
+        />
 
         <div className="flex items-center gap-4">
           <nav>
