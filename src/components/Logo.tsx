@@ -1,6 +1,7 @@
+import logo from "../assets/logo.svg"
 
 export const Logo = () => {
   return (
-    <div>Logo</div>
+    <img src={logo} alt="Javier Gonzalez" />
   )
 }
