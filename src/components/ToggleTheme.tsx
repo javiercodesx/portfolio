@@ -8,8 +8,8 @@ export const ThemeToggle = () => {
   return (
     <Button
       onClick={toggleTheme}
-      className="px-4 py-1 rounded-full border border-neutral-600 text-sm cursor-pointer"
-      children={theme === 'dark' ? <IconMoon /> : <IconSun />}
+      className="py-1 px-2 rounded-full border border-neutral-600 text-sm cursor-pointer"
+      children={theme === 'dark' ? <IconMoon className='text-neutral-300 w-5' /> : <IconSun className=' w-5'/>}
     />
   )
 }
