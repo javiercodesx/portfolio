@@ -10,13 +10,13 @@ export const App = () => {
   console.log(theme)
   return (
     <>
-      <header className="max-w-3xl mx-auto py-3 flex items-center justify-between">
+      <header className="max-w-3xl mx-auto p-2 md:px-0 flex items-center justify-between">
         <Button
-          className="text-neutral-200 h-10 px-6 py-2 rounded-md"
+          className="text-neutral-200 h-10 md:px-6 md:py-2 rounded-md"
           children={<LogoDark />}
         />
 
-        <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <nav>
             <ul className="flex gap-5">
               <li><a className="text-neutral-800 dark:text-neutral-200" href="#Home">Home</a></li>
