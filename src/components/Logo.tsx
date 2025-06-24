@@ -1,7 +1,5 @@
-import logo from "../assets/logo.svg"
-
 export const Logo = () => {
   return (
-    <img src={logo} alt="Javier Gonzalez" className="h-6"/>
-  )
+    <img src="/logo.svg" alt="Javier Gonzalez" className="h-6" />
+  );
 }

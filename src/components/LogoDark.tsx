@@ -1,7 +1,5 @@
-import darkLogo from "../assets/logo-dark.svg"
-
 export const LogoDark = () => {
   return (
-    <img src={darkLogo} alt="Javier Gonzalez" className="h-6"/>
-  )
+    <img src="/logo-dark.svg" alt="Javier Gonzalez" className="h-6" />
+  );
 }

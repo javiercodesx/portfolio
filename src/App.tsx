@@ -1,18 +1,22 @@
 import { Button } from "./components/Button"
-import { Logo } from "./components/Logo"
-import { LogoDark } from "./components/LogoDark"
-import { ThemeToggle } from "./components/ToggleTheme"
-import { useTheme } from "./context/ThemeContext"
+import { IconMoon, IconSun } from "@tabler/icons-react";
+import { LogoDark } from "./components/LogoDark";
+import { Logo } from "./components/Logo";
+import { useDarkMode } from "./hooks/useDarkMode";
+import HamburguerMenu from "./components/HamburguerMenu";
 
 export const App = () => {
-  const { theme } = useTheme()
+  const { darkMode, toggleTheme } = useDarkMode()
+
   return (
     <>
-      <header className="max-w-3xl mx-auto p-2 md:px-0 flex items-center justify-between">
-        <Button
-          className="text-neutral-200 h-10 md:px-6 md:py-2 rounded-md"
-          children={theme === "dark" ? <LogoDark/> : <Logo/>}
-        />
+      <header className="max-w-3xl mx-auto p-2 md:px-0 md:py-4 flex items-center justify-between">
+
+        {darkMode ? (
+          <a href="/"><LogoDark /></a>
+        ) : (
+          <a href="/"><Logo /></a>
+        )}
 
         <div className="hidden md:flex items-center gap-4">
           <nav>
@@ -25,7 +29,16 @@ export const App = () => {
           </nav>
         </div>
 
-        <ThemeToggle />
+        <div className="flex items-center gap-5">
+          <Button
+            className="text-neutral-200 px-3 py-1 cursor-pointer rounded-full border border-neutral-800 dark:border-neutral-300"
+            onClick={toggleTheme}
+            content={darkMode ? <IconMoon className='text-neutral-300 w-4 hover:scale-105' /> : <IconSun className='text-neutral-800 w-4 hover:scale-105' />}
+          />
+
+          <HamburguerMenu />
+        </div>
+
       </header>
     </>
   )
