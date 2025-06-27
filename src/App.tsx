@@ -40,6 +40,14 @@ export const App = () => {
         </div>
 
       </header>
+
+      <section className="max-w-3xl px-2 md:px-0 mx-auto mt-[20dvh]">
+          <img src="/javier_gonzalez.jpg" alt="Javier González" className="h-24 md:h-48 rounded-xl md:rounded-4xl" />
+        <div className="flex items-center space-between">
+          <h2 className="text-neutral-800 dark:text-neutral-300">Hola! soy Desarrollador Full Stack JavaScript</h2>
+          <h3 className="text-neutral-800 dark:text-neutral-300">de Buenos Aires, Argentina.</h3>
+        </div>
+      </section>
     </>
   )
 }
