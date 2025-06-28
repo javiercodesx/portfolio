@@ -5,8 +5,8 @@ import { Bars3Icon } from '@heroicons/react/20/solid'
 export default function HamburguerMenu() {
 
   return (
-    <Popover className="relative wful">
-      <PopoverButton className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 p-1 rounded-lg hover:scale-105 outline-none md:hidden">
+    <Popover className="relative wful rounded border border-neutral-800 dark:border-neutral-700 dark:hover:bg-neutral-700 transition ease-in flex p-0.5">
+      <PopoverButton className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 rounded-lg outline-none md:hidden">
         <Bars3Icon className='w-8 h-8 text-neutral-800 dark:text-neutral-200 ' />
       </PopoverButton>
 
