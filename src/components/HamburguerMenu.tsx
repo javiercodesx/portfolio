@@ -1,6 +1,10 @@
+//---------------------------------------------------------------------------------------------------------------------------------
+
 import { Fragment } from 'react'
 import { Popover, PopoverPanel, Transition, PopoverButton } from '@headlessui/react'
 import { Bars3Icon } from '@heroicons/react/20/solid'
+
+//---------------------------------------------------------------------------------------------------------------------------------
 
 export default function HamburguerMenu() {
 
