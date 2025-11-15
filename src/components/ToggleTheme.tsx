@@ -1,10 +1,12 @@
 //---------------------------------------------------------------------------------------------------------------------------------
 
-import { Button } from './Button'
+import type { ReactElement } from 'react';
+
+import { Button } from './Button';
 
 //---------------------------------------------------------------------------------------------------------------------------------
 
-export const ThemeToggle = () => {
+const ThemeToggle: () => ReactElement = (): ReactElement => {
 
   return (
     <Button
@@ -13,3 +15,5 @@ export const ThemeToggle = () => {
     />
   )
 }
+
+export { ThemeToggle };

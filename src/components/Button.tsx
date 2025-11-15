@@ -1,16 +1,16 @@
 //---------------------------------------------------------------------------------------------------------------------------------
 
-import { ReactNode } from 'react';
+import type { ReactElement, ReactNode } from 'react';
 
 //---------------------------------------------------------------------------------------------------------------------------------
 
-interface ButtonProps {
+type ButtonProps = {
     className?: string;
     children: ReactNode;
     onClick?: () => void;
 }
 
-export const Button = ({ className = '', children, onClick, }: ButtonProps) => {
+const Button: ({ className, children, onClick, }: ButtonProps) => ReactElement = ({ className = '', children, onClick, }: ButtonProps): ReactElement => {
     return (
         <button
             className={`cursor-pointer transition ease-in ${className}`}
@@ -21,3 +21,5 @@ export const Button = ({ className = '', children, onClick, }: ButtonProps) => {
         </button>
     );
 };
+
+export { Button };

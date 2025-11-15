@@ -1,8 +1,13 @@
+//---------------------------------------------------------------------------------------------------------------------------------
+
+import type { ReactElement } from "react";
 
 import { Button } from "./Button";
 import { IconBrandLinkedin, IconMailForward } from "@tabler/icons-react";
 
-export const AboutMe = () => {
+//---------------------------------------------------------------------------------------------------------------------------------
+
+const AboutMe: () => ReactElement = (): ReactElement => {
     return (
         <section className="max-w-3xl min-h-dvh px-2 md:px-0 md:flex md:items-center md:justify-between mx-auto">
             <img src="/javier_gonzalez.jpg" alt="Javier González" className="w-32 md:w-48 rounded-xl md:rounded-4xl bg-transparent" />
@@ -40,3 +45,5 @@ export const AboutMe = () => {
         </section>
     )
 }
+
+export { AboutMe };

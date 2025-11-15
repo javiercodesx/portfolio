@@ -1,7 +1,12 @@
+//---------------------------------------------------------------------------------------------------------------------------------
 
-export const Experience = () => {
+import type { ReactElement } from 'react';
+
+//---------------------------------------------------------------------------------------------------------------------------------
+
+const Experience: () => ReactElement = (): ReactElement => {
     return (
-        <section className=" border border-t-neutral-900">
+        <section className="border border-t-neutral-900">
             <div className="max-w-4xl min-h-[80dvh] md:px-2 md:flex md:flex-col md:gap-10 mx-auto">
                 <h3 className="text-4xl font-black text-neutral-200 mt-10">
                     Experience
@@ -38,3 +43,5 @@ export const Experience = () => {
         </section>
     )
 }
+
+export { Experience };

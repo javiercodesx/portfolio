@@ -1,12 +1,13 @@
 //---------------------------------------------------------------------------------------------------------------------------------
 
+import type { ReactElement } from "react";
 import { AboutMe } from "./components/AboutMe";
 import { Experience } from "./components/Experience";
 import { Header } from "./components/Header";
 
 //---------------------------------------------------------------------------------------------------------------------------------
 
-export const App = () => {
+const App: () => ReactElement = (): ReactElement => {
 
   return (
     <>
@@ -18,3 +19,5 @@ export const App = () => {
     </>
   )
 }
+
+export { App };

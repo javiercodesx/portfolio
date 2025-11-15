@@ -1,19 +1,26 @@
+//---------------------------------------------------------------------------------------------------------------------------------
+
 import { useEffect, useState } from "react";
 
-export const useDarkMode = () => {
-    const [darkMode, setDarkMode] = useState(() => {
-        const saved = localStorage.getItem("darkMode");
+//---------------------------------------------------------------------------------------------------------------------------------
+
+const useDarkMode: () => {
+    darkMode: boolean;
+    toggleTheme: () => void;
+} = (): { darkMode: boolean; toggleTheme: () => void; } => {
+    const [darkMode, setDarkMode]: [darkMode: boolean, setDarkMode: React.Dispatch<React.SetStateAction<boolean>>] = useState((): boolean => {
+        const saved: string | null = localStorage.getItem("darkMode");
         return saved === null ? true : saved === "true";
     });
 
-    useEffect(() => {
-        localStorage.setItem("darkMode", String(darkMode));
+    useEffect((): void => {
+        localStorage.setItem("darkMode", (darkMode).toString());
         document.documentElement.classList.toggle("dark", darkMode);
     }, [darkMode]);
 
 
-    const toggleTheme = () => {
-        setDarkMode(prev => !prev);
+    const toggleTheme: () => void = (): void => {
+        setDarkMode((prev: boolean): boolean => !prev);
     };
 
     return {
@@ -21,3 +28,5 @@ export const useDarkMode = () => {
         toggleTheme
     };
 };
+
+export { useDarkMode };

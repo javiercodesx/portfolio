@@ -1,17 +1,19 @@
 //---------------------------------------------------------------------------------------------------------------------------------
 
+import type { ReactElement } from "react";
+
 import { LogoDark } from "./LogoDark";
 import { Logo } from "./Logo";
 import { useDarkMode } from "../hooks/useDarkMode";
-import HamburguerMenu from "./HamburguerMenu";
+import { HamburguerMenu } from "./HamburguerMenu";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { Button } from "./Button";
 
 //---------------------------------------------------------------------------------------------------------------------------------
 
-export const Header = () => {
+const Header: () => ReactElement = (): ReactElement => {
 
-    const { darkMode, toggleTheme } = useDarkMode();
+    const { darkMode, toggleTheme }: { darkMode: boolean, toggleTheme: () => void } = useDarkMode();
 
     return (
         <header className="fixed top-0 left-0 w-full z-10 bg-neutral-200 dark:bg-neutral-950 border-b border-b-neutral-300 dark:border-b-neutral-900">
@@ -66,3 +68,5 @@ export const Header = () => {
         </header>
     )
 }
+
+export { Header };
